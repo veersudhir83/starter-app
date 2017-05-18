@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Implementation-Title: CourseApiApp
+Implementation-Title: starter-app
 Implementation-Version: 0.0.1-SNAPSHOT
 Built-By: SV40298
 Implementation-Vendor-Id: io.sudheer.springboot

@@ -34,22 +34,24 @@ public class TopicService {
 		return message;
 	}
 
-	public void updateTopic(String id, Topic topic) {
+	public String updateTopic(String id, Topic topic) {
 		Topic t = null;
+		String message = "Not found and Not Updated";
 		for(int i=0; i < topics.size(); i++) {
 			t = topics.get(i);
 			if(t.getId().equals(id)) {
 				topics.set(i, topic);
-				System.out.println("Topic Updated");
-				return;
+				message = "Topic Updated";
+				return message;
 			}
 		}
+		return message;
 	}
 	
-	public void removeTopic(String id) {
+	public String removeTopic(String id) {
 		//Using Lambda predicate
 		topics.removeIf(t -> t.getId().equals(id));
-		System.out.println("Topic Deleted");
+		return "Topic Deleted";
 		
 		//General for loop
 		/*Topic t = null;

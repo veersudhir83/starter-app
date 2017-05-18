@@ -22,9 +22,16 @@ public class TopicService {
 		return topics.stream().filter(t -> t.getId().equalsIgnoreCase(id)).findFirst().get();
 	}
 
-	public void addTopic(Topic topic) {
-		topics.add(topic);
-		System.out.println("Topic Added");
+	public String addTopic(Topic topic) {
+		String message;
+		if (topics.stream().anyMatch(t -> t.getId().equalsIgnoreCase(topic.getId()))) {
+			message = "Already Exists";
+		} else {
+			topics.add(topic);
+			message = "Added Topic";
+		}
+		
+		return message;
 	}
 
 	public void updateTopic(String id, Topic topic) {
@@ -42,6 +49,7 @@ public class TopicService {
 	public void removeTopic(String id) {
 		//Using Lambda predicate
 		topics.removeIf(t -> t.getId().equals(id));
+		System.out.println("Topic Deleted");
 		
 		//General for loop
 		/*Topic t = null;

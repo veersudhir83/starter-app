@@ -40,8 +40,8 @@ public class TopicController {
 	
 	@RequestMapping(method=RequestMethod.POST, value="/topics")
 	//adds the topic using service
-	public void addTopic(@RequestBody Topic topic) {
-		topicService.addTopic(topic);
+	public String addTopic(@RequestBody Topic topic) {
+		return topicService.addTopic(topic);
 	}
 	
 	@RequestMapping(method=RequestMethod.PUT, value="/topics/{id}")

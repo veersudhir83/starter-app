@@ -1,4 +1,4 @@
-package io.sudheer.springbootstarter.topic;
+package io.sudheer.springboot.topic;
 
 public class Topic {
 

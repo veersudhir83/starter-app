@@ -1,6 +1,7 @@
 package io.sudheer.springboot.starterapp;
 
 import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertSame;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,10 +13,18 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class StarterAppApplicationTests {
 
 	@Test
-	public void contextLoads() {
+	public void checkArrays() {
 		byte[] expected = "trial".getBytes();
 	    byte[] actual = "trial1".getBytes();
 	    assertArrayEquals("failure - byte arrays not same", expected, actual);
 	}
+	
+	@Test
+	public void checkStrings() {
+		String expected = "trial";
+	    String actual = "trial1";
+	    assertSame("failure - byte arrays not same", expected, actual);
+	}
+
 
 }

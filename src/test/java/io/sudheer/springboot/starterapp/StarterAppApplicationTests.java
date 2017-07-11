@@ -14,7 +14,7 @@ public class StarterAppApplicationTests {
 	@Test
 	public void contextLoads() {
 		byte[] expected = "trial".getBytes();
-	    byte[] actual = "trial".getBytes();
+	    byte[] actual = "trial1".getBytes();
 	    assertArrayEquals("failure - byte arrays not same", expected, actual);
 	}
 

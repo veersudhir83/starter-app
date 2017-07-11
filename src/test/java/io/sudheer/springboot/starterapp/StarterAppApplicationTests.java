@@ -23,7 +23,7 @@ public class StarterAppApplicationTests {
 	public void checkStrings() {
 		String expected = "trial";
 	    String actual = "trial1";
-	    assertSame("failure - byte arrays not same", expected, actual);
+	    assertSame("failure - strings are not same", expected, actual);
 	}
 
 

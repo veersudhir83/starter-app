@@ -12,16 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class TopicController {
-
-	@RequestMapping("/allTopics")
-	//gets all topics from static array list within the controller class
-	public List<Topic> getAllTopics() { 
-		return Arrays.asList(
-				new Topic("spring", "Springframework", "Springframework Description"),
-				new Topic("java", "Core Java", "Core Java description"),
-				new Topic("javascript", "Javascript", "Javascript Description")
-				);
-	}
 	
 	@Autowired 
 	private TopicService topicService;
